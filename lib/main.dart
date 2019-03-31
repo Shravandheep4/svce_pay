@@ -4,6 +4,7 @@ import 'package:carousel_pro/carousel_pro.dart';
 //User-defined imports
 import 'package:svce_pay/components/horizontal_listview.dart';
 import 'package:svce_pay/components/products.dart';
+import 'package:svce_pay/pages/cart.dart';
 
 
 void main(){
@@ -41,6 +42,7 @@ class _HomePageState extends State<HomePage> {
         animationCurve: Curves.fastOutSlowIn,
         animationDuration: Duration(milliseconds: 1000),
         dotSize: 4.0,
+        dotBgColor: Colors.transparent,
         indicatorBgPadding: 6.0,
         dotColor: Colors.white,
       )
@@ -55,7 +57,9 @@ class _HomePageState extends State<HomePage> {
         title : Text("SVCEpay"),
         actions: <Widget>[
           new IconButton(icon: Icon(Icons.search, color: Colors.white),onPressed: (){} ),
-          new IconButton(icon: Icon(Icons.shopping_cart, color: Colors.white),onPressed: (){} )
+          new IconButton(icon: Icon(Icons.shopping_cart, color: Colors.white),onPressed: (){
+             Navigator.push(context, MaterialPageRoute(builder: (context) => new Cart()));
+          } )
         ],
       ),
 
@@ -85,7 +89,7 @@ class _HomePageState extends State<HomePage> {
               onTap: (){},
               child: ListTile(
                 title : Text("Home Page"),
-                leading: Icon(Icons.home),
+                leading: Icon(Icons.home, color: Colors.red),
               ),
             ),
 
@@ -93,7 +97,7 @@ class _HomePageState extends State<HomePage> {
               onTap: (){},
               child: ListTile(
                 title : Text("My Account"),
-                leading: Icon(Icons.person),
+                leading: Icon(Icons.person, color: Colors.red),
               ),
             ),
 
@@ -102,16 +106,18 @@ class _HomePageState extends State<HomePage> {
               onTap: (){},
               child: ListTile(
                 title : Text("My Orders"),
-                leading: Icon(Icons.shopping_basket),
+                leading: Icon(Icons.shopping_basket, color: Colors.red),
               ),
             ),
 
 
             new InkWell(
-              onTap: (){},
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => new Cart()));
+              },
               child: ListTile(
-                title : Text("Stalls"),
-                leading: Icon(Icons.dashboard),
+                title : Text("Shopping cart"),
+                leading: Icon(Icons.shopping_cart, color: Colors.red,),
               ),
             ),
 
@@ -120,7 +126,7 @@ class _HomePageState extends State<HomePage> {
               onTap: (){},
               child: ListTile(
                 title : Text("Favourites"),
-                leading: Icon(Icons.favorite),
+                leading: Icon(Icons.favorite, color: Colors.red),
               ),
             ),
 
