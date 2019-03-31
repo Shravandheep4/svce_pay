@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 
+//User-defined imports
+import 'package:svce_pay/components/horizontal_listview.dart';
+import 'package:svce_pay/components/products.dart';
+
+
 void main(){
 
   runApp(
@@ -20,7 +25,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
 
-    Widget image_carousel = new Container(
+    Widget imageCarousel = new Container(
       height: 200.0,
       child : new Carousel(
         boxFit: BoxFit.cover,
@@ -32,9 +37,12 @@ class _HomePageState extends State<HomePage> {
           AssetImage('assets/images/w3.jpeg'),
           AssetImage('assets/images/w4.jpeg'),
         ],
-        autoplay: false,
+        autoplay: true,
         animationCurve: Curves.fastOutSlowIn,
         animationDuration: Duration(milliseconds: 1000),
+        dotSize: 4.0,
+        indicatorBgPadding: 6.0,
+        dotColor: Colors.white,
       )
     );
 
@@ -140,7 +148,19 @@ class _HomePageState extends State<HomePage> {
 
       body : new ListView(
         children: <Widget>[
-          image_carousel
+          
+          imageCarousel,
+
+          new Padding(padding: const EdgeInsets.all(10.0),child: new Text("Categories")),
+
+          new HorizontalList(),
+
+          new Padding(padding: const EdgeInsets.all(10.0),child: new Text("Frequenctly bought")),
+
+          Container(
+            height: 320.0,
+            //child: Product(),
+          )
         ],
       )
     );
