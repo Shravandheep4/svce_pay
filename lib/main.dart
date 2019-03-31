@@ -155,11 +155,11 @@ class _HomePageState extends State<HomePage> {
 
           new HorizontalList(),
 
-          new Padding(padding: const EdgeInsets.all(10.0),child: new Text("Frequenctly bought")),
+          new Padding(padding: const EdgeInsets.all(8.0),child: new Text("Frequenctly bought")),
 
-          Container(
-            height: 320.0,
-            //child: Product(),
+          new Container(
+            height: 250.0,
+            child: Products(),
           )
         ],
       )
