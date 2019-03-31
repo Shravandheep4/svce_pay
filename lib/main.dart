@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:carousel_pro/carousel_pro.dart';
 
 void main(){
 
@@ -18,8 +19,29 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+
+    Widget image_carousel = new Container(
+      height: 200.0,
+      child : new Carousel(
+        boxFit: BoxFit.cover,
+        images: [
+          AssetImage('assets/images/c1.jpg'),
+          AssetImage('assets/images/m1.jpeg'),
+          AssetImage('assets/images/m2.jpg'),
+          AssetImage('assets/images/w1.jpeg'),
+          AssetImage('assets/images/w3.jpeg'),
+          AssetImage('assets/images/w4.jpeg'),
+        ],
+        autoplay: false,
+        animationCurve: Curves.fastOutSlowIn,
+        animationDuration: Duration(milliseconds: 1000),
+      )
+    );
+
+
     return Scaffold(
       appBar: new AppBar(
+        elevation: 5.0,
         backgroundColor: Colors.green,
         //centerTitle: true,
         title : Text("SVCEpay"),
@@ -44,7 +66,7 @@ class _HomePageState extends State<HomePage> {
                 )
               ),
               decoration: new BoxDecoration(
-                color : Colors.green
+                color : Colors.pink
               ),
 
             ),
@@ -100,7 +122,7 @@ class _HomePageState extends State<HomePage> {
               onTap: (){},
               child: ListTile(
                 title : Text("Settings"),
-                leading: Icon(Icons.settings),
+                leading: Icon(Icons.settings, color: Colors.blue,),
               ),
             ),
 
@@ -108,13 +130,19 @@ class _HomePageState extends State<HomePage> {
               onTap: (){},
               child: ListTile(
                 title : Text("Help"),
-                leading: Icon(Icons.help),
+                leading: Icon(Icons.help, color: Colors.green,),
               ),
             )
 
           ],
         ),
       ),
+
+      body : new ListView(
+        children: <Widget>[
+          image_carousel
+        ],
+      )
     );
   }
 }
