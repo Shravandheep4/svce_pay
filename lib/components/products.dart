@@ -10,31 +10,29 @@ class _ProductsState extends State<Products> {
 
   var productList = [
     {
-      "name": "Blazer",
-      "picture" : "assets/images/products/blazer1.jpeg",
+      "name": "Samosa",
+      "picture" : "assets/images/food/pl1.jpg",
       "price": 50,
     },
 
     {
-      "name": "Red Dress",
-      "picture" : "assets/images/products/dress1.jpeg",
+      "name": "Pav Bhaji",
+      "picture" : "assets/images/food/pl2.jpg",
       "price": 50,
     },
 
     {
-      "name": "Some dress",
-      "picture" : "assets/images/products/hills1.jpeg",
+      "name": "Flavours",
+      "picture" : "assets/images/food/pl3.jpg",
       "price": 50,
     },
 
     {
-      "name": "Hills",
-      "picture" : "assets/images/products/hills2.jpeg",
+      "name": "Ice Cream",
+      "picture" : "assets/images/food/pl4.jpg",
       "price": 50,
     },
 
-    
-    
   ];
 
   @override
@@ -86,14 +84,14 @@ class SingleProduct extends StatelessWidget {
             child: GridTile(
               child: Image.asset(prodPicture, fit: BoxFit.cover,), 
               footer: Container(
-                color: Colors.white30,
+                color: Colors.white,
                 child: new Row(
                   children: <Widget>[
                     Expanded(
-                      child: Text(prodName,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16.0)),
+                      child: Text(prodName,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16.0, color: Colors.black)),
                     ),
 
-                    new Text("\$${prodPrice}", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.green, fontSize: 16.0),)
+                    new Text("Rs ${prodPrice}", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.green, fontSize: 16.0),)
 
 
                   ],

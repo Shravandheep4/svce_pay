@@ -177,7 +177,7 @@ class _ProductDetailsState extends State<ProductDetails> {
 
           new ListTile(
             title : new Text("Food Descripton"),
-            subtitle: new Text("Sambar often contains sambar powder, a coarse spice mix made of roasted lentils, dried whole red chilies, fenugreek seeds, coriander seeds and sometimes asafoetida and curry leaves. Regional variations include cumin, black pepper, grated coconut, cinnamon, or other spices.The vegetables, tamarind pulp, sambar powder, turmeric, salt, and asafoetida are boiled together until the vegetables are half-cooked. Then the cooked lentils (most often the split pigeon pea) are added and allowed to cook until the vegetables are done. A spice-scented oil is added to the cooked sambar for extra flavor and tempering, and the dish is served garnished with fresh coriander leaves or curry leaves."), 
+            subtitle: new Text("SVCE offers various kinds of delicious!!"), 
           
           ),
 
@@ -210,29 +210,28 @@ class SimilarProducts extends StatefulWidget {
 class _SimilarProductsState extends State<SimilarProducts> {
 var productList = [
     {
-      "name": "Blazer",
-      "picture" : "assets/images/products/blazer1.jpeg",
+      "name": "Samosa",
+      "picture" : "assets/images/food/pl1.jpg",
       "price": 50,
     },
 
     {
-      "name": "Red Dress",
-      "picture" : "assets/images/products/dress1.jpeg",
+      "name": "Pav Bhaji",
+      "picture" : "assets/images/food/pl2.jpg",
       "price": 50,
     },
 
     {
-      "name": "Some dress",
-      "picture" : "assets/images/products/hills1.jpeg",
+      "name": "Flavours",
+      "picture" : "assets/images/food/pl3.jpg",
       "price": 50,
     },
 
     {
-      "name": "Hills",
-      "picture" : "assets/images/products/hills2.jpeg",
+      "name": "Ice Cream",
+      "picture" : "assets/images/food/pl4.jpg",
       "price": 50,
     },
-
     
     
   ];
@@ -293,7 +292,7 @@ class SingleSimilarProducts extends StatelessWidget {
                       child: Text(prodName,style: TextStyle(fontWeight: FontWeight.bold,fontSize: 16.0)),
                     ),
 
-                    new Text("\$${prodPrice}", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.red, fontSize: 16.0),)
+                    new Text("Rs.${prodPrice}", style: TextStyle(fontWeight: FontWeight.bold, color: Colors.red, fontSize: 16.0),)
 
 
                   ],

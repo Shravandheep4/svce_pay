@@ -10,18 +10,18 @@ class _CartProductsState extends State<CartProducts> {
   
   var productsOnCart = [
     {
-      "name": "Blazer",
-      "picture" : "assets/images/products/blazer1.jpeg",
+      "name": "Pav Bhaji",
+      "picture" : "assets/images/food/pl2.jpg",
+      "quantity" : 1,
       "price": 50,
-      "quantity" : 1
     },
 
     {
-      "name": "Red Dress",
-      "picture" : "assets/images/products/dress1.jpeg",
+      "name": "Flavours",
+      "picture" : "assets/images/food/pl3.jpg",
+      "quantity" : 3,
       "price": 50,
-      "quantity" : 3
-    }
+    },
   ];
 
   
@@ -73,10 +73,10 @@ class SingleCartProduct extends StatelessWidget {
             new Row(
               children: <Widget>[
                 Padding(padding: EdgeInsets.all(2.0), child: Text("Quantity:")),
-                Padding(padding: EdgeInsets.all(2.0), child: Text("${prodQuant}", style: TextStyle(color: Colors.pink, fontSize: 18.0),)),
+                Padding(padding: EdgeInsets.all(2.0), child: Text("${prodQuant}", style: TextStyle(color: Colors.pink, fontSize: 14.0),)),
                 
-                Padding(padding: const EdgeInsets.fromLTRB(14.0, 2.0, 2.0, 2.0), child: Text("Price:")),
-                Padding(padding: const EdgeInsets.all(2.0), child: Text("\$${prodPrice}", style: TextStyle(color: Colors.pink, fontSize: 18.0),))
+                Padding(padding: const EdgeInsets.fromLTRB(10.0, 2.0, 2.0, 2.0), child: Text("Price:")),
+                Padding(padding: const EdgeInsets.all(2.0), child: Text("\$${prodPrice}", style: TextStyle(color: Colors.pink, fontSize: 14.0),))
               ],
             )
           ],

@@ -31,17 +31,16 @@ class _HomePageState extends State<HomePage> {
       child : new Carousel(
         boxFit: BoxFit.cover,
         images: [
-          AssetImage('assets/images/c1.jpg'),
-          AssetImage('assets/images/m1.jpeg'),
-          AssetImage('assets/images/m2.jpg'),
-          AssetImage('assets/images/w1.jpeg'),
-          AssetImage('assets/images/w3.jpeg'),
-          AssetImage('assets/images/w4.jpeg'),
+          AssetImage('assets/images/food/pl1.jpg'),
+          AssetImage('assets/images/food/pl2.jpg'),
+          AssetImage('assets/images/food/pl3.jpg'),
+          AssetImage('assets/images/food/pl4.jpg'),
+          AssetImage('assets/images/food/pl6.jpg')
         ],
         autoplay: true,
         animationCurve: Curves.fastOutSlowIn,
-        animationDuration: Duration(milliseconds: 1000),
-        dotSize: 4.0,
+        animationDuration: Duration(milliseconds: 2000),
+        dotSize: 7.0,
         dotBgColor: Colors.transparent,
         indicatorBgPadding: 6.0,
         dotColor: Colors.white,
@@ -53,8 +52,8 @@ class _HomePageState extends State<HomePage> {
       appBar: new AppBar(
         elevation: 5.0,
         backgroundColor: Colors.green,
-        //centerTitle: true,
-        title : Text("SVCEpay"),
+        centerTitle: true,
+        title : Text("SVCE pay"),
         actions: <Widget>[
           new IconButton(icon: Icon(Icons.search, color: Colors.white),onPressed: (){} ),
           new IconButton(icon: Icon(Icons.shopping_cart, color: Colors.white),onPressed: (){
@@ -78,7 +77,7 @@ class _HomePageState extends State<HomePage> {
                 )
               ),
               decoration: new BoxDecoration(
-                color : Colors.pink
+                color : Colors.red
               ),
 
             ),
@@ -157,7 +156,7 @@ class _HomePageState extends State<HomePage> {
           
           imageCarousel,
 
-          new Padding(padding: const EdgeInsets.all(10.0),child: new Text("Categories")),
+          new Padding(padding: const EdgeInsets.all(10.0),child: new Text("Stalls")),
 
           new HorizontalList(),
 

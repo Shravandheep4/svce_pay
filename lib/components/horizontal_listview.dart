@@ -4,39 +4,39 @@ class HorizontalList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 95.0,
+      height: 120.0,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: <Widget>[
 
           Category(
-            imageLocation: 'assets/images/cats/tshirt.png',
-            imageCaption: 'Shirt',
+            imageLocation: 'assets/images/food/c1.png',
+            imageCaption: 'Main canteen',
           ),
 
           Category(
-            imageLocation: 'assets/images/cats/dress.png',
-            imageCaption: 'Dress',
+            imageLocation: 'assets/images/food/c2.png',
+            imageCaption: 'Food Court',
           ),
           
           Category(
-            imageLocation: 'assets/images/cats/formal.png',
-            imageCaption: 'Formals',
+            imageLocation: 'assets/images/food/c3.png',
+            imageCaption: 'Aavin',
           ),
 
           Category(
-            imageLocation: 'assets/images/cats/informal.png',
-            imageCaption: 'Informals',
+            imageLocation: 'assets/images/food/c4.png',
+            imageCaption: 'Cafateria',
           ),
 
           Category(
-            imageLocation: 'assets/images/cats/shoe.png',
-            imageCaption: 'Shoes',
+            imageLocation: 'assets/images/food/c5.png',
+            imageCaption: 'Juice Center',
           ),
 
           Category(
-            imageLocation: 'assets/images/cats/jeans.png',
-            imageCaption: 'Jeans',
+            imageLocation: 'assets/images/food/f1.png',
+            imageCaption: 'Chill out',
           ),
 
         ],
