@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class HorizontalList extends StatelessWidget {
+class Stalls extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
